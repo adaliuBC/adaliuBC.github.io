@@ -1,9 +1,32 @@
 body
 {
-	background-color:yellow;
+	background-color:white;
+}
+
+h1
+{
+	text-align:center;
 }
 
 p 
 {
-	color:blue;
+	color:black;
 }
+
+table
+{
+	border:1px solid black;
+}
+td
+{
+	border:1px solid black;
+	height:25px;
+	width:300px;
+}
+th
+{
+	border:1px solid black;
+	height:25px;
+	width:300px;
+}
+
