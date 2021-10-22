@@ -1,0 +1,139 @@
+/* .App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+:root {
+  --main-color: #5ea3d0;
+  --secondary-color: rgb(255, 255, 255) ;
+  --main-text-color: #315974;
+  --secondary-text-color: #b0c7d6;
+  --send-message-form: #F5F5F5;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 10;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: 	#3e5869; 
+}
+
+.App {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px 1fr 1fr 1fr 1fr 100px;
+  grid-template-areas: 
+      "h h h h h h"
+      "u m m m m m"
+      "u m m m m m"
+      "u m m m m m"
+      "u m m m m m"
+      "f f f f f f";
+}
+
+.ChatClient-header{
+  grid-area: h;
+}
+
+.online-users {
+  grid-area: u;
+}
+
+.message-list {
+  grid-area: m;
+}
+
+.dialog-input-form {
+  grid-area: f;
+}
+
+/* format each section */
+.ChatClient-header{
+  text-align: center;
+}
+
+.message {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+.message .message-username {
+  font-size: 10px;
+  color: var(--main-text-color);
+}
+.message .message-text {
+  background: var(--main-color);
+  color: var(--secondary-color);
+  display: inline;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.message-list {
+  box-sizing: border-box;
+  padding-left: 5px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: var(--secondary-color);
+}
+
+.online-users {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: var(--main-color);
+  overflow: scroll;
+  height: 100%;
+}
+
+.user{
+  font-size: 20px;
+  color: var(--secondary-color)
+}
+
+.dialog-input-form {
+  font-size: 20px;
+  background: var(--send-message-form);
+  display: flex;
+}
+
+.dialog-input-form input {
+  font-size: 20px;
+  width: 100%;
+  padding: 15px 10px;
+  margin: 0;
+  border-style: none;
+  background: var(--send-message-form);
+  font-weight: 200;
+
+}
+
+.dialog-input-form input:focus {
+  font-size: 20px;
+  outline-width: 0;
+}
+
+.dialog-input-form input::placeholder {
+  font-size: 20px;
+  color: var(--main-text-color);
+}
